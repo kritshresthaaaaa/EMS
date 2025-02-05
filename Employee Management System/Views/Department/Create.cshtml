@@ -1,0 +1,18 @@
+﻿@model Employee_Management_System.Application.DTOs.DepartmentDto.CreateDepartmentRequestDto
+
+@{
+    ViewData["Title"] = "Add Department";
+}
+
+<h2>Add Department</h2>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="DepartmentName"></label>
+        <input asp-for="DepartmentName" class="form-control" />
+        <span asp-validation-for="DepartmentName" class="text-danger"></span>
+    </div>
+    <br />
+    <button type="submit" class="btn btn-success">Create</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>

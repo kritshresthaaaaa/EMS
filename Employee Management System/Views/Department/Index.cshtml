@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Employee_Management_System.Application.DTOs.DepartmentDto.GetDepartmentResponseDto>
+
+@{
+    ViewData["Title"] = "Departments";
+}
+
+<h2 class="text-center">Departments</h2>
+
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger">@TempData["Error"]</div>
+}
+
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success">@TempData["Success"]</div>
+}
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Add New Department</a>
+</p>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var department in Model)
+        {
+            <tr>
+                <td>@department.DepartmentID</td>
+                <td>@department.DepartmentName</td>
+            </tr>
+        }
+    </tbody>
+</table>
