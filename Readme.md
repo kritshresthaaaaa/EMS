@@ -52,6 +52,11 @@ Open your browser and navigate to:
 http://localhost:5212 (or)
 https://localhost:7065
 
+The credientails are:
+
+Email: testadmin@gmail.com
+Password: Admin@123
+
 ## Technical Details
 
 - Backend: .NET Core 8
